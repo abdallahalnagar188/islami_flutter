@@ -149,7 +149,15 @@ class QuranTab extends StatelessWidget {
           color: IslamiTheme.appColor,
         ),
         Expanded(
-          child: ListView.builder(
+          child: ListView.separated(
+            separatorBuilder: (context, index) {
+              return Container(
+                height: 2,
+                width: double.infinity,
+                color: IslamiTheme.appColor,
+                margin: EdgeInsets.symmetric(horizontal: 40,vertical: 4),
+              );
+            },
             itemBuilder: (context, index) {
               return InkWell(
                 onTap: () {

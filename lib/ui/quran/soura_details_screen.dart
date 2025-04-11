@@ -13,7 +13,7 @@ class SouraDetailsScreen extends StatefulWidget {
 }
 
 class _SouraDetailsScreenState extends State<SouraDetailsScreen> {
-  List verses = [];
+  List<String> verses = [];
 
   @override
   Widget build(BuildContext context) {
