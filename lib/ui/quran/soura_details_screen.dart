@@ -26,12 +26,23 @@ class _SouraDetailsScreenState extends State<SouraDetailsScreen> {
         Image.asset(MyImages.mainBg),
         Scaffold(
           appBar: AppBar(title: Text(args.souraName)),
-          body: ListView.builder(
-            itemBuilder: (context, index) {
-              print(verses[index]);
-              return Text(verses[index]);
-            },
-            itemCount: verses.length,
+          body: Card(
+            margin: EdgeInsets.symmetric(vertical: 40,horizontal: 20),
+            child: ListView.builder(
+              padding: EdgeInsets.symmetric(vertical: 20,horizontal: 22),
+              itemBuilder: (context, index) {
+                print(verses[index]);
+                return Container(
+                  margin: EdgeInsets.symmetric(vertical: 4),
+                  child: Text(verses[index],textDirection: TextDirection.rtl,style: TextStyle(
+                    color: Colors.black87,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 18,
+                  ),),
+                );
+              },
+              itemCount: verses.length,
+            ),
           ),
         ),
       ],
