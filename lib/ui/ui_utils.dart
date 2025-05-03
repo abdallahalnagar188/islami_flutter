@@ -7,4 +7,5 @@ class MyImages {
   static const String iconSebha = "assets/images/icon_sebha.png";
   static const String quranIv = "assets/images/quran_image.png";
   static const String hadethIv = "assets/images/hadeth_image.png";
+
 }

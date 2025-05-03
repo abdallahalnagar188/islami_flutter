@@ -1,11 +1,25 @@
-
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:islami_flutter/ui/hadeth/hadeth_details_screen.dart';
 
 import '../them/islami_theme.dart';
 import '../ui_utils.dart';
 
-class HadethTab extends StatelessWidget {
+class HadethTab extends StatefulWidget {
   const HadethTab({super.key});
+
+  @override
+  State<HadethTab> createState() => _HadethTabState();
+}
+
+class _HadethTabState extends State<HadethTab> {
+  List<Hadeth> allAhadeth = [];
+
+  @override
+  void initState() {
+    readAhadethFromFile();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,15 +55,21 @@ class HadethTab extends StatelessWidget {
                 height: 2,
                 width: double.infinity,
                 color: IslamiTheme.appColor,
-                margin: EdgeInsets.symmetric(horizontal: 40,vertical: 4),
+                margin: EdgeInsets.symmetric(horizontal: 40, vertical: 4),
               );
             },
             itemBuilder: (context, index) {
               return InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    HadethDetailsScreen.routName,
+                    arguments: allAhadeth[index],
+                  );
+                },
                 child: Text(
+                  allAhadeth[index].title,
                   textAlign: TextAlign.center,
-                  "Hadthe one",
                   style: TextStyle(
                     color: Colors.black87,
                     fontSize: 22,
@@ -58,11 +78,36 @@ class HadethTab extends StatelessWidget {
                 ),
               );
             },
-            itemCount: 100,
+            itemCount: allAhadeth.length,
             padding: EdgeInsets.symmetric(horizontal: 10),
           ),
         ),
       ],
     );
   }
+
+  void readAhadethFromFile() async {
+    String fileContent = await rootBundle.loadString(
+      "assets/files/ahadeth.txt",
+    );
+    List<String> seperatedAhadeth = fileContent.split("#");
+
+    for (int i = 0; i < seperatedAhadeth.length; i++) {
+      String singleHadeth = seperatedAhadeth[i];
+      List<String> lines = singleHadeth.trim().split("\n");
+      String title = lines[0];
+      lines.removeAt(0);
+      String content = lines.join("\n");
+      Hadeth h = Hadeth(title, content);
+      allAhadeth.add(h);
+    }
+    setState(() {});
+  }
+}
+
+class Hadeth {
+  String title;
+  String content;
+
+  Hadeth(this.title, this.content);
 }
