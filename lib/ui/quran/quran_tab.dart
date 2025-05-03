@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami_flutter/ui/quran/soura_details_screen.dart';
 import 'package:islami_flutter/ui/them/islami_theme.dart';
 import 'package:islami_flutter/ui/ui_utils.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class QuranTab extends StatelessWidget {
   var souraNameList = [
@@ -135,7 +136,7 @@ class QuranTab extends StatelessWidget {
         Container(
           padding: EdgeInsets.symmetric(vertical: 8),
           child: Text(
-            "Sora Name",
+           AppLocalizations.of(context)!.chapterName,
             style: TextStyle(
               color: Colors.black87,
               fontWeight: FontWeight.bold,

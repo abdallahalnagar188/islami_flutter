@@ -5,6 +5,7 @@ import 'package:islami_flutter/ui/radio/radio_tab.dart';
 import 'package:islami_flutter/ui/sebha/sebha_tab.dart';
 import 'package:islami_flutter/ui/them/islami_theme.dart';
 import 'package:islami_flutter/ui/ui_utils.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -24,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
       children: [
         Image.asset(MyImages.mainBg),
         Scaffold(
-          appBar: AppBar(title: Text("Islami App")),
+          appBar: AppBar(title: Text(AppLocalizations.of(context)!.appTitle)),
           body: tabs[selectedIndex],
           bottomNavigationBar: BottomNavigationBar(
             onTap: (index) {
@@ -36,22 +37,22 @@ class _HomeScreenState extends State<HomeScreen> {
             items: [
               BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage(MyImages.iconQuran)),
-                label: "Quran",
+                label: AppLocalizations.of(context)!.quranTap,
                 backgroundColor: IslamiTheme.appColor,
               ),
               BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage(MyImages.iconHadeth)),
-                label: "Hadeth",
+                label: AppLocalizations.of(context)!.ahadethTap,
                 backgroundColor: IslamiTheme.appColor,
               ),
               BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage(MyImages.iconSebha)),
-                label: "Sebha",
+                label: AppLocalizations.of(context)!.sebhaTap,
                 backgroundColor: IslamiTheme.appColor,
               ),
               BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage(MyImages.iconRadio)),
-                label: "Radio",
+                label: AppLocalizations.of(context)!.radioTap,
                 backgroundColor: IslamiTheme.appColor,
               ),
             ],
