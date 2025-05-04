@@ -6,6 +6,8 @@
   "sebhaTap": "Sebha",
   "radioTap": "Radio",
   "chapterName": "Sora Name",
-  "hadethNum": "Ahadeth"
+  "hadethNum": "Ahadeth",
+  "settings": "Settings",
+  "language": "Language"
 
 }

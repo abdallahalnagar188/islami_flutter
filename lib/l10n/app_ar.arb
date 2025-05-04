@@ -6,5 +6,7 @@
   "sebhaTap": "سبحه",
   "radioTap": "راديو",
   "chapterName": "اسم السوره",
-  "hadethNum": "احاديث"
+  "hadethNum": "احاديث",
+  "settings": "الاعدادات",
+  "language": "اللغه"
 }

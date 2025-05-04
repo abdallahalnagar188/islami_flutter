@@ -8,4 +8,5 @@ class MyImages {
   static const String quranIv = "assets/images/quran_image.png";
   static const String hadethIv = "assets/images/hadeth_image.png";
   static const String bodyOfSeb7a = "assets/images/body_of_seb7a.png";
+  static const String settingsIv = "assets/images/settings.png";
 }

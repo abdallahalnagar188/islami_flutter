@@ -3,6 +3,7 @@ import 'package:islami_flutter/ui/hadeth/hadeth_tab.dart';
 import 'package:islami_flutter/ui/quran/quran_tab.dart';
 import 'package:islami_flutter/ui/radio/radio_tab.dart';
 import 'package:islami_flutter/ui/sebha/sebha_tab.dart';
+import 'package:islami_flutter/ui/settings/settings_tab.dart';
 import 'package:islami_flutter/ui/them/islami_theme.dart';
 import 'package:islami_flutter/ui/ui_utils.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -55,6 +56,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 label: AppLocalizations.of(context)!.radioTap,
                 backgroundColor: IslamiTheme.appColor,
               ),
+              BottomNavigationBarItem(
+                icon: ImageIcon(AssetImage(MyImages.settingsIv)),
+                label: AppLocalizations.of(context)!.settings,
+                backgroundColor: IslamiTheme.appColor,
+              ),
             ],
           ),
         ),
@@ -64,5 +70,5 @@ class _HomeScreenState extends State<HomeScreen> {
 }
 
 var tabs = [
-  QuranTab(), HadethTab(),SebhaTab(),RadioTab()
+  QuranTab(), HadethTab(),SebhaTab(),RadioTab(),SettingsTab()
 ];
