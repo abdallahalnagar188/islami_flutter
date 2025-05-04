@@ -9,7 +9,7 @@ class AppSettingsBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final languageProvider = Provider.of<LanguageProvider>(context);
-    final currentLang = languageProvider.currentLocale.languageCode;
+    final currentLang = languageProvider.currentLocale;
 
     return SizedBox(
       width: double.infinity,

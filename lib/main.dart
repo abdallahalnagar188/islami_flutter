@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
       theme: IslamiTheme.lightTheme,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      locale: languageProvider.currentLocale, // 👈 use dynamic locale
+      locale:Locale( languageProvider.currentLocale), // 👈 use dynamic locale
     );
   }
 }

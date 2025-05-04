@@ -42,7 +42,7 @@ class _SettingsTabState extends State<SettingsTab> {
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Text(
-                  languageProvider.currentLocale.languageCode == 'ar'
+                  languageProvider.currentLocale == 'ar'
                       ? 'العربية'
                       : 'English',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
