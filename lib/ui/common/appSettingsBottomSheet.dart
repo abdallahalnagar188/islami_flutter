@@ -33,7 +33,7 @@ class AppSettingsBottomSheet extends StatelessWidget {
                   languageProvider.setLanguage('ar');
                 }
               },
-              child: getItem(context, "Arabic", currentLang == 'ar'),
+              child: getItem(context, "العربية", currentLang == 'ar'),
             ),
           ],
         ),
@@ -54,7 +54,7 @@ class AppSettingsBottomSheet extends StatelessWidget {
             fontStyle: FontStyle.normal,
           ),
         ),
-        if (selected) const Icon(Icons.check),
+        if (selected) const Icon(Icons.check_rounded),
       ],
     );
   }

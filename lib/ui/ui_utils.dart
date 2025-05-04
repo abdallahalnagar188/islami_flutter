@@ -9,4 +9,8 @@ class MyImages {
   static const String hadethIv = "assets/images/hadeth_image.png";
   static const String bodyOfSeb7a = "assets/images/body_of_seb7a.png";
   static const String settingsIv = "assets/images/settings.png";
+  static const String radioIv = "assets/images/radio_image.png";
+  static const String icArrowNext = "assets/images/ic_arrow_next.png";
+  static const String icPlay = "assets/images/ic_play.png";
+  static const String icArrowForward = "assets/images/ic_arrow_forward.png";
 }
