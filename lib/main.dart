@@ -4,8 +4,9 @@ import 'package:islami_flutter/ui/home_screen.dart';
 import 'package:islami_flutter/ui/providers/LanguageProvider.dart';
 import 'package:islami_flutter/ui/quran/soura_details_screen.dart';
 import 'package:islami_flutter/ui/them/islami_theme.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
+
+import 'l10n/app_localizations.dart';
 
 void main() {
   runApp(
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
       theme: IslamiTheme.lightTheme,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      locale:Locale( languageProvider.currentLocale), // 👈 use dynamic locale
+      locale: Locale(languageProvider.currentLocale), // 👈 use dynamic locale
     );
   }
 }

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami_flutter/ui/hadeth/hadeth_details_screen.dart';
+import '../../l10n/app_localizations.dart';
 import '../them/islami_theme.dart';
 import '../ui_utils.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HadethTab extends StatefulWidget {
   const HadethTab({super.key});

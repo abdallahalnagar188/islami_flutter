@@ -6,7 +6,8 @@ import 'package:islami_flutter/ui/sebha/sebha_tab.dart';
 import 'package:islami_flutter/ui/settings/settings_tab.dart';
 import 'package:islami_flutter/ui/them/islami_theme.dart';
 import 'package:islami_flutter/ui/ui_utils.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import '../l10n/app_localizations.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
